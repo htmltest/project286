@@ -43,6 +43,11 @@ p {margin:24px 0; padding:0}
     .btn-blue:hover {background-color:#2C2D84}
 }
 
+.btn-green {background-color:#37AE35}
+@media (min-width:1100px) {
+    .btn-green:hover {background-color:#2C2D84}
+}
+
 .form-input {position:relative; margin:20px 0}
 .form-input-label {position:absolute; left:15px; top:20px; font-weight:600; font-size:20px; line-height:1.3em; color:#8D8DA6; transition:all 0.2s; z-index:1; pointer-events:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; right:15px}
 .form-input.focus .form-input-label,
@@ -130,11 +135,12 @@ header .container {display:flex; align-items:center; height:65px; justify-conten
 .welcome {background:url(../images/welcome-bg.svg) no-repeat center; background-size:cover; color:#FFFFFF}
 .welcome .container {display:flex; align-items:center; height:377px; justify-content:space-between}
 .welcome-title {font-weight:600; font-size:44px; line-height:1.2em}
+.welcome-title span {color:#E86630}
 .welcome-text {margin:10px 0 0 0; font-size:18px; line-height:1.5em}
 .welcome-period {margin:10px 0 0 0; font-size:13px; line-height:1.5em; color:rgba(255, 255, 255, 0.75)}
 .welcome-btn {margin:20px 0 0 0}
 .welcome-btn .btn {height:40px}
-.welcome-img {min-width:536px; max-width:536px; margin:0 -84px 0 0}
+.welcome-img {min-width:456px; max-width:456px; margin:0 -84px 0 0}
 .welcome-img img {display:block; width:100%}
 
 @media (max-width:1680px) {
@@ -142,15 +148,16 @@ header .container {display:flex; align-items:center; height:65px; justify-conten
 }
 
 @media (max-width:1099px) {
-    .welcome-img {min-width:530px; max-width:530px; margin:0 -131px 0 -60px}
+    .welcome-img {margin:0 -228px 0 -100px}
 }
 
 @media (max-width:767px) {
     .welcome .container {display:block; height:600px; position:relative}
-    .welcome-title {padding:40px 0 0 0; font-size:32px; line-height:1.2em; max-width:240px}
+    .welcome-title {padding:40px 0 0 0; font-size:32px; line-height:1.2em}
+    .welcome-title br {display:none}
     .welcome-text {margin:20px 0 0 0; font-size:18px; line-height:1.5em}
     .welcome-btn .btn {display:inline-flex}
-    .welcome-img {min-width:402px; max-width:402px; margin:0 0 0 -201px; position:absolute; left:50%; bottom:-80px}
+    .welcome-img {min-width:313px; max-width:313px; margin:0 0 0 -157px; position:absolute; left:50%; bottom:-80px}
 }
 
 .precaution {margin:120px -84px 0 -84px; height:280px; padding:0 84px; background:#E9E9F7; border-radius:12px; display:flex; align-items:center; justify-content:space-between}
@@ -354,7 +361,9 @@ footer {background:#3E3E59}
 .window-particate {width:1000px; padding:40px}
 .window-particate-form {margin:40px 0 0 0}
 .window-particate-row {margin:20px 0 0 0; display:flex; gap:0 20px}
-.window-particate-row .form-input {margin:0; min-width:calc(50% - 10px); max-width:calc(50% - 10px)}
+.window-particate-col {min-width:calc(50% - 10px); max-width:calc(50% - 10px)}
+.window-particate-row .form-input {margin:20px 0 0 0}
+.window-particate-row .form-input:first-child {margin:0}
 .window-particate-polis {margin:40px -20px 0 -20px; padding:20px; border-radius:12px; background:#F8F8FC}
 .window-particate-polis-title {font-weight:600; font-size:20px; line-height:1.3em; color:#3E3E59}
 .window-particate-polis .form-input {margin:20px 0 0 0}
@@ -371,9 +380,11 @@ footer {background:#3E3E59}
 
 @media (max-width:767px) {
     .window-particate {width:375px; padding:20px 15px 15px 15px}
-    .window-particate .main-title {max-width:165px}
+    .window-particate .main-title {max-width:253px}
+    .window-particate .main-title br {display:none}
     .window-particate-row {margin:0; display:block}
-    .window-particate-row .form-input {margin:10px 0 0 0; min-width:0; max-width:none}
+    .window-particate-col {min-width:0; max-width:none; margin:10px 0 0 0}
+    .window-particate-row .form-input {margin:10px 0 0 0}
     .window-particate-polis {margin:20px -15px 0 -15px; padding:30px 15px; border-radius:0}
     .window-particate-polis-title {font-size:17px; line-height:1.3em}
     .window-particate-ctrl {display:block}
@@ -382,7 +393,7 @@ footer {background:#3E3E59}
 }
 
 .success {margin:80px 0 0 0; text-align:center}
-.success-icon {max-width:160px; margin:0 auto}
+.success-icon {max-width:116px; margin:0 auto}
 .success-icon img {display:block; width:100%}
 .success-title {margin:20px 0 0 0; font-weight:600; font-size:24px; line-height:1.3em; color:#37AE35}
 .success-text {margin:20px 0 0 0}
