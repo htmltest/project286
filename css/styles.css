@@ -368,7 +368,7 @@ footer {background:#3E3E59}
 .window-particate-polis-title {font-weight:600; font-size:20px; line-height:1.3em; color:#3E3E59}
 .window-particate-polis .form-input {margin:20px 0 0 0}
 .window-particate-ctrl {margin:20px 0 0 0; display:flex; justify-content:space-between}
-.window-particate-ctrl .form-checkbox {margin:0; max-width:600px}
+.window-particate-ctrl .form-checkbox {margin:0 40px 0 0}
 
 @media (max-width:1680px) {
     .window-particate {width:840px}
