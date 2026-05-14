@@ -48,6 +48,11 @@ p {margin:24px 0; padding:0}
     .btn-green:hover {background-color:#2C2D84}
 }
 
+.btn-red {background-color:#BC3F46}
+@media (min-width:1100px) {
+    .btn-green:hover {background-color:#2C2D84}
+}
+
 .form-input {position:relative; margin:20px 0}
 .form-input-label {position:absolute; left:15px; top:20px; font-weight:600; font-size:20px; line-height:1.3em; color:#8D8DA6; transition:all 0.2s; z-index:1; pointer-events:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; right:15px}
 .form-input.focus .form-input-label,
@@ -396,9 +401,29 @@ footer {background:#3E3E59}
 .success-icon {max-width:116px; margin:0 auto}
 .success-icon img {display:block; width:100%}
 .success-title {margin:20px 0 0 0; font-weight:600; font-size:24px; line-height:1.3em; color:#37AE35}
+.window-error .success-title {color:#BC3F46}
 .success-text {margin:20px 0 0 0}
 .success-btn {margin:80px 0 0 0}
 
 @media (max-width:767px) {
     .success {margin:40px 0 0 0}
+}
+
+.bottom-messages {position:fixed; left:50%; width:600px; margin:0 0 0 -300px; bottom:20px; z-index:99; display:flex; gap:10px 0; flex-direction:column}
+.bottom-messages-item {display:none; width:100%; background:#FFFFFF; border-radius:4px; box-shadow:0px 0px 10px rgba(0, 0, 0, 0.02), 0px 10px 30px rgba(0, 0, 0, 0.05)}
+.bottom-messages-item.visible {display:block}
+
+@media screen and (max-width:1099px) {
+    .bottom-messages {left:16px; width:auto; margin:0; right:16px}
+}
+
+.cookies-message {padding:16px 0}
+.cookies-message-content {display:flex; align-items:center}
+.cookies-message-text {margin:0 22px 0 0; font-size:13px; line-height:18px; width:100%}
+.cookies-message-close {padding:13px 20px; height:auto}
+
+@media screen and (max-width:1099px) {
+    .cookies-message-content {display:block; text-align:center}
+    .cookies-message-text {margin:0 0 20px 0; text-align:left}
+    .cookies-message-close {width:100%}
 }

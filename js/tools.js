@@ -147,3 +147,25 @@ function windowClose() {
         $(window).scrollTop($('html').data('scrollTop'));
     }
 }
+
+$(document).ready(function(e) {
+
+    $('.cookies-message-close').click(function(e) {
+        document.cookie = 'cookieapply=1; path=/'
+        $('.cookies-message').fadeOut(500);
+        e.preventDefault();
+    });
+
+    var isCookie = false;
+    var allCookie = document.cookie.split('; ');
+    for (var i = 0; i < allCookie.length; i++) {
+        var curCookie = allCookie[i].split('=');
+        if (curCookie[0] == 'cookieapply' && curCookie[1] == '1') {
+            isCookie = true;
+        }
+    }
+    if (!isCookie) {
+        $('.cookies-message').addClass('visible');
+    }
+
+});
